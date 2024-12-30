@@ -32,4 +32,15 @@ public class BinarySearchTree <T extends Comparable<T>>{
             printInOrderRecursively(node.right);
         }
     }
+
+    public int size(){
+        return sizeRecursively(root);
+    }
+
+    private int sizeRecursively(MyBinaryNode<T> node){
+        if(node==null){
+            return 0;
+        }
+        return 1+ sizeRecursively(node.left)+sizeRecursively(node.right);
+    }
 }
