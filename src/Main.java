@@ -20,11 +20,14 @@ public class Main {
         bst.add(63);
         bst.add(67);
 
-        // Printing the tree in-order
+// Printing the tree in-order
         System.out.println("In-order traversal of the BST:");
         bst.printInOrder();
 
         // Checking the size of the tree
         System.out.println("Size of the BST: " + bst.size());
+
+        // Searching for the key 63
+        System.out.println("Is 63 present in the BST? " + bst.search(63));
     }
 }

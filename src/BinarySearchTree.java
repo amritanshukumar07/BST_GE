@@ -43,4 +43,18 @@ public class BinarySearchTree <T extends Comparable<T>>{
         }
         return 1+ sizeRecursively(node.left)+sizeRecursively(node.right);
     }
+  public boolean search(T key){
+        return searchRecursively(root,key);
+  }
+    private boolean searchRecursively(MyBinaryNode<T> current, T key){
+        if(current==null){
+            return false;
+        }
+        if(key.compareTo(current.key)==0){
+            return true;
+        }
+        return key.compareTo(current.key)<0
+                ? searchRecursively(current.left,key)
+                : searchRecursively(current.right,key);
+    }
 }
